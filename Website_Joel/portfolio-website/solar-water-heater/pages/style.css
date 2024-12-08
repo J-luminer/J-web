@@ -1,0 +1,106 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Back to Home Icon */
+.back-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.triangle-icon {
+    width: 0;
+    height: 0;
+    margin-top: 15px;
+    margin-left: -30px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 35px solid #333;
+    transition: transform 0.3s ease;
+    rotate: -90deg;
+}
+
+.back-home:hover .triangle-icon {
+    transform: scale(1.1);
+    border-bottom-color: #007bff;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+    margin-top: 0;
+    padding: 10px;
+}
+
+/* Poster Section */
+.poster-container {
+    position: relative;
+    width: 100vw; /* Lebar penuh perangkat */
+    min-height: 100vw; /* Set minimal height untuk memenuhi layar */
+    overflow-y: scroll; /* Mengaktifkan scroll vertikal */
+    margin: 0; /* Menghilangkan margin agar tidak ada ruang kosong */
+    padding: 0; /* Menghilangkan padding untuk menghindari ruang kosong */
+    border: 5px solid black; /* Menambahkan border di sekitar poster */
+    box-sizing: border-box; /* Memastikan border masuk dalam perhitungan ukuran */
+}
+
+/* Gambar di dalam poster */
+.poster-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Menyesuaikan lebar gambar dengan container */
+    object-fit: cover; /* Memastikan gambar tetap proporsional */
+    height: auto;
+}
