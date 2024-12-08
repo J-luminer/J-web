@@ -3,45 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar Water Heater</title>
+    <title>Team Rivor</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="back-arrow" onclick="window.location.href='../projects.html'"></div>
-        <h1>Solar Water Heater</h1>
-        <nav>
-            <ul>
-                <li><a href="pages/about.html">About</a></li>
-                <li><a href="pages/team.html">Team</a></li>
-            </ul>
-        </nav>
-    </header>    
-
-    <main>
-        <section id="main-slider">
-            <div class="slide active">
-                <h2>Welcome to Solar Water Heater</h2>
-                <p>Efficient, Eco-friendly, and Sustainable Energy Solutions.</p>
-            </div>
-            <div class="slide">
-                <h2>Why Solar Water Heater?</h2>
-                <p>Learn how our technology harnesses the power of the sun.</p>
-            </div>
-            <div class="slide">
-                <h2>Join Our Mission</h2>
-                <p>Be part of the change towards a greener future.</p>
-            </div>
-        </section>
-
-        <div class="controls">
-            <button id="prev">⟨</button>
-            <button id="next">⟩</button>
+    <header id="main-menu" class="hero-section">
+        <div class="hero-content">
+            <h1>Rivor</h1>
+            <p>Physics has answers to many of our questions</p>
+            <button onclick="scrollToSection('about')">Learn more</button>
         </div>
-    </main>
+    </header>
+    
+    <nav class="navbar">
+        <ul>
+            <li> 
+                <a href="../projects.html" class="back-home">
+                    <div class="triangle-icon"></div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>We are young visionaries who believe that communities can innovate from the ground up through the practical application of physics.</p>
+    </section>
+    <button class="back-button" onclick="scrollToSection('main-menu')">Back</button>
+    
+    <section id="team" class="team-section">
+        <h2>Meet the Team</h2>
+        <div class="team-container">
+            <div class="team-card">
+                <div class="team-image" style="background-image: url('images/7.jpg');"></div>
+                <h3>Joel Brian Nugraha</h3>
+                <p>Project Manager</p>
+                <p>SMAS Santo Thomas 1 Medan</p>
+                <div class="team-links">
+                    <a href="https://www.linkedin.com/in/joel-brian-nugraha/" class="btn linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="mailto:joelbriannugraha@gmail.com" class="btn email" target="_blank" rel="noopener noreferrer">Email</a>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-image" style="background-image: url('images/2.jpg');"></div>
+                <h3>Gerrard Filbert O. S.</h3>
+                <p>Designer</p>
+                <p>SMAS Unggul Del</p>
+                <div class="team-links">
+                    <a href="https://www.linkedin.com/in/gerrard-filbert-a2b1a7295/" class="btn linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="mailto:simanungkalitgerrard@gmail.com" class="btn email" target="_blank" rel="noopener noreferrer">Email</a>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-image" style="background-image: url('images/1.jpg');"></div>
+                <h3>Israel Sinurat</h3>
+                <p>Designer</p>
+                <p>SMAN 2 Balige</p>
+                <div class="team-links">
+                    <a href="https://www.linkedin.com/in/israel-sinurat-9023972b8/" class="btn linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="mailto:israelsinurat885@gmail.com" class="btn email" target="_blank" rel="noopener noreferrer">Email</a>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-image" style="background-image: url('images/6.jpg');"></div>
+                <h3>Bintang L. J. Siregar</h3>
+                <p>Cost Engineer</p>
+                <p>SMAN 2 Lintong Nihuta</p>
+                <div class="team-links">
+                    <a href="https://www.linkedin.com/in/bintang-lam-jaya-siregar-7263642b5/" class="btn linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="mailto:09091974bintang@gmail.com" class="btn email" target="_blank" rel="noopener noreferrer">Email</a>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-image" style="background-image: url('images/5.jpg');"></div>
+                <h3>Nathanael B. Sagala</h3>
+                <p>Material Engineer</p>
+                <p>SMAS Unggul Del</p>
+                <div class="team-links">
+                    <a href="https://www.linkedin.com/in/nathanael-bonardo-sagala-140b8b29a/" class="btn linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="mailto:nathanaelbeni49@gmail.com" class="btn email" target="_blank" rel="noopener noreferrer">Email</a>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-image" style="background-image: url('images/4.jpg');"></div>
+                <h3>Muhammad Pasha Hermawan</h3>
+                <p>Documentor</p>
+                <p>SMAN 3 Semarang</p>
+                <div class="team-links">
+                    <a href="https://www.linkedin.com/in/muhammad-pasha-185933281/" class="btn linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="mailto:pashahermawan30@gmail.com" class="btn email" target="_blank" rel="noopener noreferrer">Email</a>
+                </div>
+            </div>            
+        </div>
+    </section>
+    
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out to us for collaborations or inquiries!</p>
+        <div class="contact-details">
+            <p>Email: teamrivor@example.com</p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+    </section>
 
     <footer>
-        <p>Team Rivor © 2024</p>
+        <p>Team Rivor &copy; 2024</p>
     </footer>
 
     <script src="script.js"></script>

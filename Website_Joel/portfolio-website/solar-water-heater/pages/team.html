@@ -12,8 +12,24 @@
     </header>
     <main>
         <h1>Meet Our Team</h1>
-        <p>Our team consists of engineers and innovators dedicated to building a sustainable future.</p>
-    </main>
+        <div class="team-container">
+            <div class="team-card" onclick="revealCard(this)">
+                <div class="team-image" style="background-image: url('../images/member1.jpg');"></div>
+                <div class="team-info">
+                    <h2>John Doe</h2>
+                    <p>Lead Engineer</p>
+                </div>
+            </div>
+            <div class="team-card" onclick="revealCard(this)">
+                <div class="team-image" style="background-image: url('../images/member2.jpg');"></div>
+                <div class="team-info">
+                    <h2>Jane Smith</h2>
+                    <p>Project Manager</p>
+                </div>
+            </div>
+            <!-- Tambahkan kartu tim lain sesuai kebutuhan -->
+        </div>
+    </main>       
     <footer>
         <p>Team Rivor © 2024</p>
     </footer>
