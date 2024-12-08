@@ -15,8 +15,17 @@ window.addEventListener('scroll', () => {
     // Jika header (main-menu) terlihat penuh, nonaktifkan scroll
     const headerVisible = mainMenu.getBoundingClientRect().top >= 0 && mainMenu.getBoundingClientRect().bottom <= window.innerHeight;
     if (headerVisible) {
-        document.body.style.overflowY = 'hidden'; // Menonaktifkan scroll saat main-menu terlihat
+        document.body.style.overflowY = 'hidden';
+    }
+});
+
+document.body.style.overflowY = "hidden"; // Ini akan menghilangkan scroll
+
+window.addEventListener('scroll', function() {
+    // Memeriksa apakah scroll berada di posisi paling atas
+    if (window.scrollY === 0) {
+        document.body.style.overflowY = 'hidden';  // Menonaktifkan scroll ketika di posisi paling atas
     } else {
-        document.body.style.overflowY = 'auto'; // Mengaktifkan scroll kembali
+        document.body.style.overflowY = 'auto';  // Mengaktifkan scroll saat sudah digulir
     }
 });
