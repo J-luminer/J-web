@@ -219,9 +219,10 @@ footer {
 }
 
 .continue-button {
+    text-decoration: none;
     position: fixed; /* Tetap di pojok kanan meski di-scroll */
-    right: 20px; /* Jarak dari sisi kanan */
-    bottom: 20px; /* Jarak dari sisi bawah */
+    right: 10px; /* Jarak dari sisi kanan */
+    bottom: 10px; /* Jarak dari sisi bawah */
     background: linear-gradient(90deg, #000000, #6e6d6d);
     color: white;
     font-size: 16px;
@@ -252,4 +253,108 @@ footer {
 .continue-button:hover::after {
     right: 5px;
     opacity: 1;
+}
+
+.contact-section {
+    position: relative;
+    height: 400px; /* Menambah tinggi untuk memberi ruang */
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.contact-section .content {
+    text-align: center;
+    transition: opacity 0.3s;
+}
+
+.contact-section .social-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Tombol disembunyikan secara default */
+    opacity: 0; /* Tidak tampak saat awal */
+    display: flex;
+    gap: 10px; /* Mengurangi jarak antara tombol */
+    transition: transform 0.3s, opacity 0.3s; /* Menambahkan transisi untuk tombol */
+    max-width: 100%; /* Tombol akan menyesuaikan dengan lebar perangkat */
+    width: 90%; /* Agar tombol tidak terlalu melebar */
+    justify-content: center; /* Tombol rata tengah */
+}
+
+.contact-section .social-buttons a {
+    width: 60px; /* Ukuran tombol kotak yang lebih kecil */
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #15ce1b; /* Border tipis */
+    border-radius: 5px; /* Sedikit border radius untuk sudut yang lebih lembut */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+.contact-section .social-buttons a img {
+    width: 30px; /* Ukuran logo di dalam tombol yang lebih kecil */
+    height: 30px;
+}
+
+.contact-section .social-buttons .whatsapp {
+    background-color: #ffffff; /* WhatsApp Green */
+}
+
+.contact-section .social-buttons .gmail {
+    background-color: #fff;
+    border: 2px solid #ea4335; /* Gmail Red */
+}
+
+.contact-section .social-buttons a:hover {
+    transform: scale(1.1); /* Efek pembesaran saat hover */
+}
+
+.contact-section .social-buttons .whatsapp:hover {
+    background-color: #52ccbe; /* WhatsApp Darker Green */
+}
+
+.contact-section .social-buttons .gmail:hover {
+    background-color: #b8b0b0;
+}
+
+/* Transisi saat hover */
+.contact-section:hover .content {
+    opacity: 0; /* Menghilangkan teks saat hover */
+}
+
+.contact-section:hover .social-buttons {
+    transform: translate(-50%, -50%) scale(1); /* Munculkan tombol saat hover */
+    opacity: 1; /* Munculkan tombol */
+}
+
+/* Teks "Contact Us" yang muncul di antara tombol */
+.contact-section .social-buttons .contact-text {
+    font-size: 16px; /* Ukuran font yang lebih kecil */
+    color: #333;
+    text-align: center;
+    align-self: center;
+    transition: opacity 0.3s;
+    opacity: 0; /* Teks tidak muncul saat awal */
+    padding: 0 10px;
+}
+
+.contact-section:hover .social-buttons .contact-text {
+    opacity: 1; /* Teks akan muncul saat hover */
+}
+
+/* Efek tombol bergerak saat hover, lebih fleksibel */
+.contact-section:hover .social-buttons .whatsapp {
+    transform: translateX(-10px); /* Tombol WhatsApp bergerak sedikit ke kiri */
+}
+
+.contact-section:hover .social-buttons .gmail {
+    transform: translateX(10px); /* Tombol Gmail bergerak sedikit ke kanan */
 }
