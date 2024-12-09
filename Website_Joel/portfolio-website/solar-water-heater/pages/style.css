@@ -109,52 +109,8 @@ footer {
 /* Tombol untuk memunculkan gambar baru */
 .show-image-btn {
     position: absolute;
-    top: 2%;
-    right: 2%;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.show-image-btn img {
-    width: 5vw;
-    height: auto;
-}
-
-/* Tombol countdown */
-.countdown-btn {
-    position: absolute;
-    top: 5%;
-    right: 2%;
-    background-color: transparent;
-    border: 1px solid black;
-    padding: 1vw 2vw;
-    font-size: 2vw;
-    color: black;
-    z-index: 10;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-/* Gambar baru yang akan muncul */
-.extra-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: none;
-    z-index: 20;
-    opacity: 1;
-}
-
-
-/* Tombol untuk memunculkan gambar baru */
-.show-image-btn {
-    position: absolute;
-    top: 2vh;
-    right: 5vw;
+    top: 2.1vh;
+    right: 5.5vw;
     background-color: transparent;
     border: none;
     cursor: pointer;
