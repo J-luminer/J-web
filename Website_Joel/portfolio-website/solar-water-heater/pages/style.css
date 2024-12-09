@@ -89,7 +89,10 @@ footer {
     overflow-y: scroll;
     margin: 0;
     padding: 0;
-    border: 5px solid black;
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
     box-sizing: border-box;
 }
 
@@ -206,7 +209,10 @@ footer {
     overflow-y: hidden; /* Menonaktifkan scroll vertikal */
     margin: 0;
     padding: 0;
-    border: 5px solid black;
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
     box-sizing: border-box;
 }
 
