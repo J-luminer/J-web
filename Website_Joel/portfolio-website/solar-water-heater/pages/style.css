@@ -76,23 +76,21 @@ footer {
     background: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     position: relative;
     z-index: 10;
-    margin-top: 0;
-    padding: 20px;
 }
 
 /* Poster Section */
 .poster-container {
     position: relative;
-    width: 100vw; /* Lebar penuh perangkat */
-    min-height: 135vw; /* Set minimal height untuk memenuhi layar */
-    overflow-y: scroll; /* Mengaktifkan scroll vertikal */
-    margin: 0; /* Menghilangkan margin agar tidak ada ruang kosong */
-    padding: 0; /* Menghilangkan padding untuk menghindari ruang kosong */
-    border: 5px solid black; /* Menambahkan border di sekitar poster */
-    box-sizing: border-box; /* Memastikan border masuk dalam perhitungan ukuran */
+    width: 100vw;
+    min-height: 135vw;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+    border: 5px solid black;
+    box-sizing: border-box;
 }
 
 /* Gambar di dalam poster */
@@ -100,7 +98,57 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Menyesuaikan lebar gambar dengan container */
-    object-fit: cover; /* Memastikan gambar tetap proporsional */
+    width: 100%;
+    object-fit: cover;
     height: auto;
+}
+
+/* Tombol untuk memunculkan gambar baru */
+.show-image-btn {
+    position: absolute;
+    top: 2vh;
+    right: 5vw;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.show-image-btn img {
+    width: 5vw;
+    height: auto;
+}
+
+/* Tombol countdown */
+.countdown-btn {
+    position: absolute;
+    top: 2.2vh;
+    right: 6vw;
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 1vw 2vw;
+    font-size: 2vw;
+    color: black;
+    z-index: 20;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Gambar baru yang akan muncul */
+.extra-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    display: none; /* Mulai dengan gambar tersembunyi */
+    z-index: 15;
+    opacity: 1; /* Mulai dengan opacity 0 */
+}
+
+
+/* Efek transisi untuk gambar blur */
+.blurred {
+    filter: blur(5px) brightness(0.6); /* Mulai dengan blur 5px */
+    transition: filter 3s ease;
 }

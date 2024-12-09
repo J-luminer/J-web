@@ -1,31 +1,22 @@
-function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    section.scrollIntoView({ behavior: 'smooth' });
+const container = document.querySelector('.poster-container');
 
-    // Aktifkan scroll jika menuju selain bagian main-menu
-    if (sectionId !== 'main-menu') {
-        document.body.style.overflowY = 'auto';
-    }
-}
+container.addEventListener('click', (event) => {
+    const containerRect = container.getBoundingClientRect();
 
-// Fungsi untuk memantau posisi scroll
-window.addEventListener('scroll', () => {
-    const mainMenu = document.getElementById('main-menu');
+    const clickX = ((event.clientX - containerRect.left) / containerRect.width) * 100;
+    const clickY = ((event.clientY - containerRect.top) / containerRect.height) * 100;
 
-    // Jika header (main-menu) terlihat penuh, nonaktifkan scroll
-    const headerVisible = mainMenu.getBoundingClientRect().top >= 0 && mainMenu.getBoundingClientRect().bottom <= window.innerHeight;
-    if (headerVisible) {
-        document.body.style.overflowY = 'hidden';
-    }
-});
+    console.log(`Klik di X: ${clickX.toFixed(2)}%, Y: ${clickY.toFixed(2)}%`);
 
-document.body.style.overflowY = "hidden"; // Ini akan menghilangkan scroll
+    // Cek apakah klik berada di dalam kotak
+    const boxX = 14.375, boxY = 43.9, boxWidth = 57.25, boxHeight = 27.2;
 
-window.addEventListener('scroll', function() {
-    // Memeriksa apakah scroll berada di posisi paling atas
-    if (window.scrollY === 0) {
-        document.body.style.overflowY = 'hidden';  // Menonaktifkan scroll ketika di posisi paling atas
+    if (
+        clickX >= boxX && clickX <= boxX + boxWidth &&
+        clickY >= boxY && clickY <= boxY + boxHeight
+    ) {
+        console.log("Klik berada dalam kotak!");
     } else {
-        document.body.style.overflowY = 'auto';  // Mengaktifkan scroll saat sudah digulir
+        console.log("Klik di luar kotak.");
     }
 });
