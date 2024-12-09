@@ -106,6 +106,50 @@ footer {
 /* Tombol untuk memunculkan gambar baru */
 .show-image-btn {
     position: absolute;
+    top: 2%;
+    right: 2%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.show-image-btn img {
+    width: 5vw;
+    height: auto;
+}
+
+/* Tombol countdown */
+.countdown-btn {
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 1vw 2vw;
+    font-size: 2vw;
+    color: black;
+    z-index: 10;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Gambar baru yang akan muncul */
+.extra-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: none;
+    z-index: 20;
+    opacity: 1;
+}
+
+
+/* Tombol untuk memunculkan gambar baru */
+.show-image-btn {
+    position: absolute;
     top: 2vh;
     right: 5vw;
     background-color: transparent;
@@ -151,4 +195,56 @@ footer {
 .blurred {
     filter: blur(5px) brightness(0.6); /* Mulai dengan blur 5px */
     transition: filter 3s ease;
+}
+
+/* Power Section */
+.power-container {
+    position: relative;
+    width: 100vw;
+    height: 60vh; /* Atur tinggi sesuai dengan viewport */
+    overflow-x: scroll; /* Mengaktifkan scroll horizontal */
+    overflow-y: hidden; /* Menonaktifkan scroll vertikal */
+    margin: 0;
+    padding: 0;
+    border: 5px solid black;
+    box-sizing: border-box;
+}
+
+.power-container img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+
+/* Tombol Power */
+.power-container .show-image-btn {
+    position: absolute;
+    top: 0.45vh;
+    right: 1vw;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.power-container .show-image-btn img {
+    width: 5vw;
+    height: auto;
+}
+
+/* Tombol countdown */
+.power-container .countdown-btn {
+    position: absolute;
+    top: 0.7vh;
+    right: 7vw;
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 1vw 2vw;
+    font-size: 2vw;
+    color: black;
+    z-index: 20;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }

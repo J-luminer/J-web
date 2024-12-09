@@ -59,11 +59,43 @@ document.querySelector('.show-image-btn').addEventListener('click', function() {
     }, 61000); // 61 detik
 });
 
-// Menambahkan efek hover untuk tombol show-image-btn
-const showImageBtn = document.querySelector('.show-image-btn');
-showImageBtn.addEventListener('mouseenter', function() {
-    showImageBtn.style.backgroundColor = '#f0f0f0'; // Warna tombol berubah saat pointer mendekat
-});
-showImageBtn.addEventListener('mouseleave', function() {
-    showImageBtn.style.backgroundColor = 'transparent'; // Mengembalikan warna tombol ke transparan setelah pointer keluar
+document.querySelector('.power-container .show-image-btn').addEventListener('click', function() {
+    // Mengambil referensi power-container
+    const powerContainer = document.querySelector('.power-container');
+    
+    // Aktifkan overflow-y agar gambar dapat digulir secara vertikal
+    powerContainer.style.overflowY = 'auto'; // Mengaktifkan scroll vertikal
+    
+    // Mengatur countdown pada tombol
+    const countdownBtn = powerContainer.querySelector('.countdown-btn');
+    let countdown = 60; // Mulai countdown dari 60 detik
+    const countdownText = countdownBtn.querySelector('.countdown-text');
+
+    // Flag untuk memastikan countdown hanya dimulai sekali
+    let countdownStarted = false;
+
+    // Fungsi untuk memulai countdown
+    function startCountdown() {
+        if (!countdownStarted) {
+            countdownStarted = true; // Menandakan countdown sudah dimulai
+            const countdownInterval = setInterval(function() {
+                countdownText.textContent = countdown;
+                countdown--;
+                if (countdown < 0) {
+                    clearInterval(countdownInterval); // Hentikan countdown
+                    countdownText.textContent = '60'; // Reset teks countdown
+                    setTimeout(startCountdown, 1000); // Reset countdown menjadi 60 detik setelah selesai
+                    
+                    // Mengatur posisi scroll kembali ke atas setelah 60 detik
+                    powerContainer.scrollTop = 0;
+
+                    // Menonaktifkan scroll setelah reset
+                    powerContainer.style.overflowY = 'hidden';
+                }
+            }, 1000);
+        }
+    }
+
+    // Memulai countdown hanya sekali
+    startCountdown(); // Memulai countdown
 });
