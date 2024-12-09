@@ -184,7 +184,7 @@ footer {
 /* Tombol Power */
 .power-container .show-image-btn {
     position: absolute;
-    top: 0.45vh;
+    top: 0.6vh;
     right: 1vw;
     background-color: transparent;
     border: none;
